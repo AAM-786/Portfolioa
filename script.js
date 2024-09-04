@@ -91,23 +91,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-//Add Mouse Event 
-document.addEventListener('mousemove', (e) => {
-    const cursor = document.getElementById('cursor');
-    cursor.style.left = `${e.clientX}px`;
-    cursor.style.top = `${e.clientY}px`;
-});
-
-document.addEventListener('click', (e) => {
-    const clickEffect = document.getElementById('click-effect');
-    clickEffect.style.left = `${e.clientX}px`;
-    clickEffect.style.top = `${e.clientY}px`;
-    clickEffect.style.opacity = 1;
-    clickEffect.style.transform = 'translate(-50%, -50%) scale(1.5)';
-    
-    setTimeout(() => {
-        clickEffect.style.opacity = 0;
-        clickEffect.style.transform = 'translate(-50%, -50%) scale(1)';
-    }, 300);
-});
 
