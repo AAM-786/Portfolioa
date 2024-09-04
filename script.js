@@ -91,25 +91,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+//Add Mouse Event 
+document.addEventListener('mousemove', (e) => {
+    const cursor = document.getElementById('cursor');
+    cursor.style.left = `${e.clientX}px`;
+    cursor.style.top = `${e.clientY}px`;
+});
 
-
-const neonEffect = document.getElementById('neon-effect');
-
-document.addEventListener('mousemove', (event) => {
-    const x = event.clientX;
-    const y = event.clientY;
-
-    // Update the position of the neon effect
-    neonEffect.style.left = `${x - 150}px`; // Offset to center the effect
-    neonEffect.style.top = `${y - 150}px`;  // Offset to center the effect
-
-    // Show the neon effect with a smooth transition
-    neonEffect.style.opacity = 1;
-
-    // Hide the neon effect after a short delay
-    clearTimeout(neonEffect.timer);
-    neonEffect.timer = setTimeout(() => {
-        neonEffect.style.opacity = 0;
-    }, 150);
+document.addEventListener('click', (e) => {
+    const clickEffect = document.getElementById('click-effect');
+    clickEffect.style.left = `${e.clientX}px`;
+    clickEffect.style.top = `${e.clientY}px`;
+    clickEffect.style.opacity = 1;
+    clickEffect.style.transform = 'translate(-50%, -50%) scale(1.5)';
+    
+    setTimeout(() => {
+        clickEffect.style.opacity = 0;
+        clickEffect.style.transform = 'translate(-50%, -50%) scale(1)';
+    }, 300);
 });
 
