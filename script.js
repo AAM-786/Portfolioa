@@ -95,3 +95,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+// Example of ensuring cursor is visible
+document.body.style.cursor = 'default'; // Ensure cursor is set to default
+
+// Check if any scripts are preventing scrolling
+window.addEventListener('scroll', function() {
+    // Uncomment if needed to debug scrolling issues
+    // console.log('Scrolling happened');
+});
+
+// Example of removing any scroll blocking behavior
+document.body.style.overflow = 'auto'; // Make sure overflow is set to auto
