@@ -1,4 +1,6 @@
 // Load education data dynamically
+/*
+
 document.addEventListener('DOMContentLoaded', () => {
     const educationTable = document.getElementById('education-table');
 
@@ -22,9 +24,10 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => console.error('Error loading education data:', error));
     }
-});
+});*/
 
 // Handle contact form submission
+
 document.getElementById('contact-form')?.addEventListener('submit', (event) => {
     event.preventDefault(); // Prevent the default form submission
 
