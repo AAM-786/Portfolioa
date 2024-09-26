@@ -10,7 +10,11 @@ body {
     line-height: 1.6;
     background-color: #1e1e1e; /* Dark background for contrast */
     color: #f4f4f4; /* Light text color for readability */
+cursor: default; /* Use 'auto' or 'default' to show the mouse cursor */
+    overflow: auto;  /* Enable scrolling on the body */
 }
+}
+
 
 header {
     background: #000;
@@ -160,6 +164,7 @@ footer {
 
     .profile-pic {
         width: 120px; /* Responsive size */
+top:25%;
         height: 120px;
     }
 
@@ -269,3 +274,9 @@ body {
 
 
 */
+
+
+.container {
+    overflow: auto;  /* Allow this container to scroll if necessary */
+    max-height: 100vh; /* Adjust as needed */
+}
