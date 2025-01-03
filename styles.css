@@ -1,65 +1,224 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 1800px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+.navbar {
+    position: fixed; /* Fix position of navbar */
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    z-index: 1000; /* Stay above other content */
+}
+
+.logo img {
+    height: 90px; /* Default size of the logo */
+    
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 2.0rem; /* Responsive text size */
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color:  rgba(0, 0, 0, 1); /* Change color on hover */
+    border-radius: 10%;
+    
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    font-size: 2.0rem;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 3px 0;
+        background-color:  #FFFFFF; /* Change color on hover */
+    border-radius: 20%;
+   
+    
+}
+
+
+/* Content Sections */
+.content {
+    padding: 80px 20px; /* Padding to accommodate fixed navbar */
+    display: none; /* Hide content by default */
+}
+
+/* Show content when active */
+.content.active {
+    display: block; /* Show content */
+}
+
+
+
+
+/* Responsive Styles. MOBILE VIEW */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide nav links by default */
+        flex-direction: column;
+        position: ;
+        top: 120px;
+        left:60%;
+        right: 0%;
+        border-radius: 10px;
+        
+        box-shadow: 0 0 60px #0F4903;
+
+        
+        button:hover {
+    background-color: #00ff00; /* Bright neon green on hover */
+}
+        background-color: #333;
+        
+        
+        
+    }
+
+    .nav-links.active {
+        display: flex; /* Show nav links when active */
+    }
+
+    .menu-toggle {
+        display: flex; /* Show the menu icon */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Basic Reset */
+/*
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 1800px; 
+    max-zoom: 800px;
+   
+  
 }
-
+*/
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
     background-color: #1e1e1e; /* Dark background for contrast */
-    color: #f4f4f4; /* Light text color for readability */
-cursor: default; /* Use 'auto' or 'default' to show the mouse cursor */
-    overflow: auto;  /* Enable scrolling on the body */
+    color: #f4f4f4,#f4f4f5; /* Light text color for readability */
 }
-}
-
 
 header {
     background: #000;
     color: #fff;
     padding: 1rem 0;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neon green shadow */
+    position:auto;
+    
 }
 
+
 nav ul {
-    list-style: none;
+   /* list-style: none;*/
+    list-style: circle;
     display: flex;
     justify-content: center;
+    
 }
 
 nav ul li {
     margin: 0 1rem;
+    object-position: fixed;
 }
 
 nav ul li a {
     color: #0f0; /* Neon green color for links */
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 2.0rem;
     transition: color 0.3s;
+    object-position: fixed;
+    font-family: 'Times New Roman', Times, serif;
+    word-spacing: 20px;
+    
+    
 }
 
 nav ul li a:hover {
     color: #00ff00; /* Bright neon green on hover */
+    object-position: fixed;
+    
 }
 
 .hero {
-    background: linear-gradient(to right, #335,#333,#786, #000,#335);
+   /* background: linear-gradient(to right, #335,#333,#786,#898,#000,#335);*/
+   
    color: #fff;
-    
+    position: fixed ;
     padding: 2rem;
     text-align: center;
+    align-content: center;
     position: relative;
-    min-height: 300px; /* Ensures the hero section has enough height */
+    border-radius: 100px;
+    min-height: 0px; /* Ensures the hero section has enough height */
+    
+    /*    box-shadow: 0 0 200px rgba(0, 255, 0, 0.5); */
+        
+       box-shadow: 0 0 200px  rgba(0, 0, 0, 1) ;
+      box-flex: 0 0 100px #0F4903;
+
 }
+
+
 
 .profile {
     position: absolute;
-    top: 30%;
+    top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
     padding: 1rem; /* Ensure there is space around the profile picture and text */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better readability */
     border-radius: 10px; /* Rounded corners for the profile container */
@@ -73,12 +232,39 @@ nav ul li a:hover {
     border: 4px solid #0f0; /* Neon green border */
     
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neon glow effect */
+    
+
 }
 
+.logo{
+        width: 100px; /* Professional size */
+      
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #0f0; /* Neon green border */
+    
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.5); /* Neon glow effect */
+    background: rgba(255, 255, 255, 1);
+
+  
+}
+
+
+
+
 .name {
-    margin: 1rem 0 0.5rem;
-    font-size: 2.5rem; /* Larger font size for name */
+    margin: 1.5rem 0 1rem;
+    font-size: 3.5rem; /* Larger font size for name */
     color: #0f0; /* Neon green text color */
+    
+    font-family: 'Times New Roman', Times, serif;
+    
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neon green shadow */
+
+            border-radius: 10%;
+  
+          background-color: rgba(0, 0, 0, 1);
 }
 
 .profession {
@@ -87,36 +273,73 @@ nav ul li a:hover {
 }
 
 .intro {
-    margin-top: 200px; /* Ensure the intro text has enough space below the profile section */
-    font-size: 1.2rem;
+    margin-top: 350px; /* Ensure the intro text has enough space below the profile section */
+    font-size: 1.9rem;
+    
 }
 
-.summary, .bio, .education, .projects, .contact {
+.summary,.bio, .education, .projects, .contact {
     padding: 2rem;
     margin: auto;
-    max-width: 800px;
+    max-width: 900px;
+    align-content: center;
     background: #222;
+    
     border-radius: 8px;
+    border-inline: 80px;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neon green shadow */
     color: #f4f4f4;
     margin-bottom: 2rem; /* Add margin-bottom for spacing between sections */
+    left:20%;
+    right:20%;
+    
+}
+.logo:hover {
+    background-color: rgba(255, 255, 255, 1) /* Change color on hover */
+    border-radius: 100%;
+    
 }
 
-h1, h2 {
+
+
+ h2{
     color: #0f0; /* Neon green for headings */
+    font-family: 'Times New Roman', Times, serif;
+    font-size:2.9;
+   
+}
+
+h1 {
+    color: #0f0; /* Neon green for headings */
+    font-family: 'Times New Roman', Times, serif;
+    /*font-size:5.0 ;*/
+    font-size:  1cm;
+    
+   
+}
+
+
+
+P,p , h3 , li , h4,label{
+  font-style: Bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.9rem;
+  
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 th, td {
     border: 1px solid #ddd;
     padding: 0.5rem;
-    text-align: left;
+    text-align: center;
     column-fill: black;
+    font-size: 1.5;
+    
 }
 
 thead {
@@ -147,8 +370,8 @@ footer {
     bottom: 0;
     box-shadow: 0 0 10px rgba(0, 255, 0, 0.5); /* Neon green shadow */
 }
-
-@media (max-width: 800px) {
+/*
+@media (max-width: 768px) {
     nav ul {
         flex-direction: column;
     }
@@ -156,15 +379,16 @@ footer {
     nav ul li {
         margin: 0.5rem 0;
     }
+    */
 
     .hero {
       
         padding: 1rem;
+        text-align: center;
     }
 
     .profile-pic {
         width: 120px; /* Responsive size */
-top:25%;
         height: 120px;
     }
 
@@ -177,12 +401,10 @@ top:25%;
     }
 
     .intro {
-        font-size: 1rem;
+        font-size: 2rem;
     }
-}
-
-@media (max-width: 400px) {
-    .profile-pic {
+    
+        .profile-pic {
         width: 100px; /* Smaller size for very small screens */
         height: 100px;
     }
@@ -196,9 +418,10 @@ top:25%;
     }
 
     .intro {
-        font-size: 0.9rem;
+        font-size: 1.9rem;
     }
 }
+
 
 
 
@@ -225,7 +448,7 @@ header.light-mode {
 }
 
 .hero.light-mode {
-    background: linear-gradient(to right, #ddd, #fff);
+    background: linear-gradient(to right, #ddd, #fff, #ddf);
     color: #000;
 }
 
@@ -238,45 +461,41 @@ button.light-mode:hover {
     background-color: #333; /* Darker background on hover */
 }
 
-
-
-/*Mouse Event 
-body {
-    margin: 0;
-    height: 100vh;
+.marquee {
     overflow: hidden;
-    background-color: #000;
-    cursor: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+        box-shadow: 0 0 190px #C88201 /* Neon glow effect */
+
+    
 }
 
-#cursor {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background-color: #fff;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
+.marquee h2 {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+    color: #0f0;
+    
 }
 
-#click-effect {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: rgba(255, 165, 0, 0.5);
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-    transition: opacity 0.3s, transform 0.3s;
+@keyframes marquee {
+    0% { transform: translate(0); }
+    100% { transform: translate(-100%); }
 }
 
 
 
-*/
 
 
-.container {
-    overflow: auto;  /* Allow this container to scroll if necessary */
-    max-height: 100vh; /* Adjust as needed */
-}
+
+
+
+
+
+
+
+
+
+
+
+
